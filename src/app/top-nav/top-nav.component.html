@@ -1,20 +1,39 @@
 <nav class="bg-gray-100">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-6xl mx-auto px-4">
         <div class="flex justify-between">
             <div class="flex space-x-4">
-                <a href="#" class="flex items-center py-5 px-2">
+                <a href="#" class="flex items-center py-5 px-2 ">
                     <svg class="h-8 w-8 mr-1 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M16 8v8m-4-5v5m-4-2v2m-2 4h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                     <span>CrpytoDash</span>
-
                 </a>
+
+                <div class="hidden md:flex items-center">
+                    <a href="#">About us</a>
+                </div>
             </div>
-            <div class="flex items-center">
-                <a href="#"> About us</a>
+            <div class="hidden md:flex items-center">
+                <a href="#">Login</a>
+            </div>
+
+
+            <div class="md:hidden flex items-center">
+                <button (click)="showMenu = !showMenu">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
         </div>
+    </div>
+
+    <div class="hidden md:hidden" [ngClass]="{hidden: showMenu}">
+        <a href="#" class="text-center block py-2 px-4 text-sm hover:bg-gray-200">About us</a>
+        <a href="#" class="text-center block py-2 px-4 text-sm hover:bg-gray-200">Login</a>
     </div>
 </nav>
