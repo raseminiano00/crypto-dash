@@ -14,9 +14,4 @@ export class TopNavComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-  menuClick() {
-    this.showMenu = !this.showMenu;
-    console.log(this.showMenu);
-  }
 }
