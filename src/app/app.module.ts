@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
+import { RouterModule } from '@angular/router';
+import { TokenDashboardModule } from './token-dashboard/token-dashboard.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { TopNavComponent } from './top-nav/top-nav.component';
     TopNavComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule,
+    TokenDashboardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
