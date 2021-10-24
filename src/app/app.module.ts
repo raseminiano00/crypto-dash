@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './top-nav/top-nav.component';
@@ -14,7 +15,8 @@ import { TokenDashboardModule } from './token-dashboard/token-dashboard.module';
   imports: [
     BrowserModule,
     RouterModule,
-    TokenDashboardModule
+    TokenDashboardModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

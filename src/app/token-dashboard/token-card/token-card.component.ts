@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-token-card',
@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./token-card.component.less']
 })
 export class TokenCardComponent implements OnInit {
+  @Input() image: string;
+  @Input() overlineText: string;
+  @Input() headlineText: string;
 
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
