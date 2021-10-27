@@ -1,14 +1,14 @@
-<div class="h-40 bg-white rounded-xl">
-    <div class="pt-5">
+<div class="h-40 sm:h-48 bg-white rounded-xl">
+    <div class="pt-5 sm:pt-8">
         <div class="flex justify-center">
             <img class="w-16 h-16" *ngIf="image" src="{{image}}">
             <div class="w-9 h-9" *ngIf="!image"> </div>
         </div>
 
-        <p class="text-center" innerHtml="{{overlineText}}"></p>
+        <p class="text-center text-sm sm:text-base" innerHtml="{{overlineText}}"></p>
     </div>
 
     <div class="pt-1">
-        <p class="text-3xl text-center">{{headlineText}}</p>
+        <p class="text-2xl text-center sm:text-3xl">{{headlineText}}</p>
     </div>
 </div>

@@ -3,7 +3,7 @@
         Token Dashboard
     </div>
     <div class="max-w-6xl h-90 lg:mx-auto md:mx-8 sm:mx-8">
-        <div class="grid justify-center gap-3 lg:grid-cols-4  md:grid-cols-3 sm: grid-cols-1">
+        <div class="grid justify-center gap-3 grid-cols-2 mx-5 lg:grid-cols-4  md:grid-cols-3">
             <ng-container *ngFor="let tokenDetail of tokenCurrentDetails">
                 <app-token-card [image]="tokenDetail.image" [overlineText]="tokenDetail.name"
                     headlineText="{{tokenDetail.currentPrice}}">
