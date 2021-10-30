@@ -16,7 +16,8 @@
                 </div>
             </div>
             <div class="hidden md:flex items-center">
-                <a href="{{routes.login}}" (click)="loginWithGoogle()">Login</a>
+                <a href="#" *ngIf="!hasUserLoggedIn" (click)="loginWithGoogle()">Login</a>
+                <a href="#" *ngIf="hasUserLoggedIn" (click)="logout()">Logout</a>
             </div>
 
 
@@ -34,6 +35,9 @@
 
     <div class="hidden md:hidden" [ngClass]="{hidden: showMenu}">
         <a href="#" class="text-center block py-2 px-4 text-sm hover:bg-gray-200">About us</a>
-        <a href="#" class="text-center block py-2 px-4 text-sm hover:bg-gray-200" (click)="loginWithGoogle()">Login</a>
+        <a href="#" class="text-center block py-2 px-4 text-sm hover:bg-gray-200" *ngIf="!hasUserLoggedIn"
+            (click)="loginWithGoogle()">Login</a>
+        <a href="#" class="text-center block py-2 px-4 text-sm hover:bg-gray-200" *ngIf="hasUserLoggedIn"
+            (click)="logout()">Logout</a>
     </div>
 </nav>
