@@ -1,8 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot } from '@angular/router';
-import { SocialUser } from 'angularx-social-login';
-import { Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { CanActivate, Router } from '@angular/router';
 import { UserService } from '../user.service';
 
 @Injectable({

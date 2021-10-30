@@ -7,6 +7,8 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { RouterModule } from '@angular/router';
 import { TokenDashboardModule } from './token-dashboard/token-dashboard.module';
 import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
+import { AuthGuardService } from './_shared/services/guards/auth-guard.service';
+import { AppRoutingModule } from './app-router.module';
 
 @NgModule({
   declarations: [
@@ -17,9 +19,10 @@ import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
     BrowserModule,
     RouterModule,
     TokenDashboardModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
-  providers: [SocialAuthService,{
+  providers: [SocialAuthService, {
     provide: 'SocialAuthServiceConfig',
     useValue: {
       autoLogin: true, //keeps the user signed in
@@ -30,7 +33,8 @@ import { GoogleLoginProvider, SocialAuthService } from 'angularx-social-login';
         }
       ]
     }
-  }],
+  },
+    AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
